@@ -59,6 +59,9 @@ GGJ2023_WWiseProject/*.prof
 GGJ2023_WWiseProject/*_WwiseProject.*.validationcache
 GGJ2023_WWiseProject/*_WwiseProject.*.wsettings
 GGJ2023_WWiseProject/**/*.akd
+Assets/LocalTesting/**
+Logs/*
+
 
 # build stuff (unsure?)
 # Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
