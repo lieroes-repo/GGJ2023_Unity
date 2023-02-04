@@ -31,8 +31,8 @@ public class GrowingPlant : MonoBehaviour
     private PlantSection[] plantSections;
     //if the plant has been watered recently
     private bool isMoist = false;
-    //if the plant is in the shade (shade is good == true, sun is bad == false)
-    private bool isUnlit = false;
+    //if the plant is in the sun (sun is bad for it and == true, shade is good and == false)
+    private bool isLit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +63,7 @@ public class GrowingPlant : MonoBehaviour
             {
                 plantSections[i].timeForGrowthStage -= Time.deltaTime;
                 //if plant is in good condition
-                if (isMoist || isUnlit)
+                if (isMoist || !isLit)
                 {
                     //event success!
                     SetPlantSectionState(i, SECTION_STATE.GROWN);
@@ -75,9 +75,6 @@ public class GrowingPlant : MonoBehaviour
                 }
             }
         }
-
-
-
 
     }
 
@@ -102,5 +99,40 @@ public class GrowingPlant : MonoBehaviour
 
 
         //TODO: add logic for going from state to state
+    }
+
+    public void PlantSunEventActivity(bool isActive)
+    {
+        //if sun is active, plant is LIT (aka not unlit)
+        isLit = isActive;
+
+        //if sun event started, go from idle to growing (goal of player is to un-lit plant while its growing)
+        if (isLit)
+        {
+            for (int i = 0; i < plantSections.Length; i++)
+            {
+                //if this section event is active AKA growing
+                if (plantSections[i].state == SECTION_STATE.IDLE)
+                {
+                    SetPlantSectionState(i, SECTION_STATE.GROWING);
+                }
+            }
+        }
+        
+    }
+
+    public void PlantInCloudShade(bool inShade)
+    {
+        Sun sunObj = GameObject.FindObjectOfType<Sun>();
+        if (!sunObj.gameObject.activeSelf)
+        {
+            //if sun is inactive
+            isLit = false;
+        }
+        else
+        {
+            //plant is not lit if its in the shade
+            isLit = !inShade;
+        }
     }
 }
