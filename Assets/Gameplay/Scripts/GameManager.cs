@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 
 public enum GAME_STATE
 {
@@ -15,40 +17,57 @@ public class GameManager : MonoBehaviour
     GAME_STATE currentState = 0;
     GAME_STATE previousState = 0;
 
-    private static GameManager _instance;
+    public static GameManager _instance;
 
-    public static GameManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-                UnityEngine.Debug.Log("nae game manager pal");
-            return _instance; 
-        }
-    }
+    public static event Action<GAME_STATE> OnGameStateChange;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        _instance = this;    
+       
+    }
+
+    private void Awake()
+    {
+        _instance = this;
     }
 
     public void setGameState(int nState)
     {
-        previousState = currentState;
-        currentState = (GAME_STATE)nState;
-        UnityEngine.Debug.Log("something changed");
+
+        _instance.previousState = currentState;
+        _instance.currentState = (GAME_STATE)nState;
+        Debug.Log("new state " + _instance.currentState.ToString());
+
+        switch(currentState)
+        {
+            case GAME_STATE.MAIN_MENU:
+                
+            break;
+            case GAME_STATE.GAME:
+                
+            break;
+            case GAME_STATE.PAUSED:
+              
+            break;
+            default:
+            break;
+               
+        }
+
+        OnGameStateChange?.Invoke(currentState);
     }
 
     GAME_STATE GetGameState()
     {
-        return currentState;
+        return _instance.currentState;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
 
