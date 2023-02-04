@@ -5,6 +5,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering.Universal.Internal;
 
+using AK;
+
 public enum GAME_STATE
 {
     MAIN_MENU,
@@ -21,12 +23,15 @@ public class GameManager : MonoBehaviour
 
     public static event Action<GAME_STATE> OnGameStateChange;
 
-
+    //wwise
+    public AK.Wwise.Event playBackgroundEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+    
+    // play background sound. Included this in this script cause this script is called at the start of the game
+    playBackgroundEvent.Post(gameObject);
     }
 
     private void Awake()
