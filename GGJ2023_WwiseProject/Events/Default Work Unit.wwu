@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="background" ID="{462B465F-FE3E-4316-824C-77135EBEBC6E}">
+					<ChildrenList>
+						<Action Name="" ID="{E2288C65-1524-4A57-9075-E53C0AEF7240}" ShortID="747818617">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="background" ID="{33B9472B-46E0-43E4-A050-F0AC4E18A520}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="bell" ID="{497F1B2B-E131-45FC-A522-6A97F580629E}">
+					<ChildrenList>
+						<Action Name="" ID="{0BAB3782-FDB5-46AD-BB90-7F7992AFAFF0}" ShortID="54960751">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bell" ID="{0E96E99E-6063-46DB-9B49-E1709F4271DD}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="water_plants_play" ID="{B7C2DECD-E9E8-4E36-8B0E-E24A685360FD}">
+					<ChildrenList>
+						<Action Name="" ID="{1E781AD2-C806-4B60-AFB4-F7FE002BA8DB}" ShortID="1073210967">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="water_plants" ID="{2D423083-10AC-4389-9C9E-53FF90B2870F}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="button_click" ID="{29643AE8-6CF3-46BE-9DFC-B575A4F9A8EB}">
+					<ChildrenList>
+						<Action Name="" ID="{85E7A0A9-4933-42B4-9AA3-D3EEA4E02543}" ShortID="719092891">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="button_click" ID="{60B35AF7-A1F5-4303-B987-26BB69BC264F}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="water_plants_stop" ID="{BD70BF74-A8E2-455F-B723-071202987BFA}">
+					<ChildrenList>
+						<Action Name="" ID="{27C6B3AF-0A4D-46D5-8FBE-5E40D835C18E}" ShortID="125259078">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="water_plants" ID="{2D423083-10AC-4389-9C9E-53FF90B2870F}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
