@@ -16,19 +16,12 @@ public class Cloud : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "GamePlant")
+        if (other.tag =="Sun")
         {
-            collision.gameObject.GetComponent<GrowingPlant>().PlantInCloudShade(true);
+            FindObjectOfType<GameState>().ActivateSun(false);
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "GamePlant")
-        {
-            collision.gameObject.GetComponent<GrowingPlant>().PlantInCloudShade(false);
-        }
-    }
 }

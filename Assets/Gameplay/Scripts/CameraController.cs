@@ -7,29 +7,31 @@ public class CameraController : MonoBehaviour
     [Range(0.0f, 45.0f)]
     public float CameraRotateLimit = 20.0f;
 
-    [Range(1.0f, 50.0f)]
-    public float mouseSensitivity = 10.0f;
+    [Range(0.0001f, 0.01f)]
+    public float mouseSensitivity = 0.5f;
 
     private float cameraRotY = 0f;
 
     private Vector3 mouseScreenPos;
     public Vector3 mouseWorldPos { get; set; }
 
+    private float sunPosX;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        sunPosX = FindObjectOfType<Sun>().gameObject.transform.position.x;
     }
 
     private void FixedUpdate()
     {
         //Camera movement
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-
-        cameraRotY -= mouseX;
+        // float mouseX = (Input.GetAxis("Mouse X") - (Screen.width / 2))/* * mouseSensitivity * Time.deltaTime*/;
+        float mouseX = (Input.mousePosition.x - (Screen.width / 2)) * mouseSensitivity;
+        cameraRotY = mouseX;
         cameraRotY = Mathf.Clamp(cameraRotY, -CameraRotateLimit, CameraRotateLimit);
 
-        transform.localRotation = Quaternion.Euler(gameObject.transform.localEulerAngles.x, -cameraRotY, gameObject.transform.localEulerAngles.z);
+        transform.localRotation = Quaternion.Euler(gameObject.transform.localEulerAngles.x, cameraRotY, gameObject.transform.localEulerAngles.z);
 
         //Mouse movement
         mouseScreenPos = Input.mousePosition;
@@ -43,8 +45,8 @@ public class CameraController : MonoBehaviour
             {
                 if (hitData.collider.tag == "Clickable")
                 {
-                    Debug.Log(mouseWorldPos);
                     Vector3 newPos = new Vector3(mouseWorldPos.x, hitData.transform.position.y, hitData.transform.position.z);
+                    newPos.x = Mathf.Clamp(newPos.x, -sunPosX, sunPosX-1);
                     hitData.transform.localPosition = newPos;
                 }
             }

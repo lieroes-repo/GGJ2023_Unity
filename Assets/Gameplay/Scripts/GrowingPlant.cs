@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum SECTION_STATE
+{
+    NOTSTARTED,
+    IDLE,
+    GROWING,
+    GROWN,
+    FAILED
+}
 
 public class GrowingPlant : MonoBehaviour
 {
-    public enum SECTION_STATE
-    {
-        NOTSTARTED,
-        IDLE,
-        GROWING,
-        GROWN,
-        FAILED
-    }
+    
 
     struct PlantSection
     {
@@ -25,19 +25,22 @@ public class GrowingPlant : MonoBehaviour
     public MeshRenderer[] sectionRenderers;
 
     //The amount of time each plant stage has to grow before it fails
-    [Range(1.0f, 100.0f)]
-    public float GrowthEventTimer = 15.0f;
+    [Range(1.0f, 20.0f)]
+    public float GrowthEventTimer = 5.0f;
 
     private PlantSection[] plantSections;
     //if the plant has been watered recently
     private bool isMoist = false;
     //if the plant is in the sun (sun is bad for it and == true, shade is good and == false)
-    private bool isLit = false;
+    public bool isLit { get; set; }
 
-    // Start is called before the first frame update
-    void Start()
+
+
+
+
+    void Awake()
     {
-
+        isLit = false;
         //init the plant sections
         plantSections = new PlantSection[sectionRenderers.Length];
         for (int i = 0; i < sectionRenderers.Length; i++)
@@ -47,13 +50,9 @@ public class GrowingPlant : MonoBehaviour
             plantSections[i].state = SECTION_STATE.NOTSTARTED;
             plantSections[i].timeForGrowthStage = GrowthEventTimer;
         }
-
-        //first section starts growing as soon as plant spawns.
-        if (plantSections.Length >= 1)
-            plantSections[0].state = SECTION_STATE.IDLE;
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
         for (int i = 0; i < plantSections.Length; i++)
@@ -78,47 +77,58 @@ public class GrowingPlant : MonoBehaviour
 
     }
 
-    private void SetPlantSectionState(int sectionID, SECTION_STATE newState)
+    public void SetPlantSectionState(int sectionID, SECTION_STATE newState)
     {
-        switch (newState)
+        
+        if(sectionID < plantSections.Length)
         {
-            case SECTION_STATE.NOTSTARTED:
-
-                break;
-            case SECTION_STATE.IDLE:
-
-                break;
-            case SECTION_STATE.GROWING:
-
-                break;
-            case SECTION_STATE.GROWN:
-                //start next section
-                if (plantSections[sectionID].state == SECTION_STATE.GROWING)
-                {
-                    if ((sectionID + 1) < plantSections.Length)
-                    {
-                        //start next sections growth (from not started to idle)
-                        SetPlantSectionState(sectionID + 1, SECTION_STATE.IDLE);
-                    }
-                }
-                plantSections[sectionID].renderer.enabled = true;
-                break;
-            case SECTION_STATE.FAILED:
-                //start next section
-                if (plantSections[sectionID].state == SECTION_STATE.GROWING)
-                {
-                    if ((sectionID + 1) < plantSections.Length)
-                    {
-                        //start next sections growth (from not started to idle)
-                        SetPlantSectionState(sectionID + 1, SECTION_STATE.IDLE);
-                    }
+            switch (newState)
+            {
+                case SECTION_STATE.NOTSTARTED:
+                    plantSections[sectionID].renderer.enabled = false;
+                    plantSections[sectionID].state = newState;
+                    break;
+                case SECTION_STATE.IDLE:
+                    plantSections[sectionID].renderer.enabled = false;
+                    plantSections[sectionID].state = newState;
+                    break;
+                case SECTION_STATE.GROWING:
+                    plantSections[sectionID].renderer.enabled = false;
+                    plantSections[sectionID].state = newState;
+                    plantSections[sectionID].timeForGrowthStage = GrowthEventTimer;
+                    break;
+                case SECTION_STATE.GROWN:
                     plantSections[sectionID].renderer.enabled = true;
-                    plantSections[sectionID].renderer.material = null;
-                }
-                break;
-        }
+                    //start next section
+                    if (plantSections[sectionID].state == SECTION_STATE.GROWING)
+                    {
+                        if ((sectionID + 1) < plantSections.Length)
+                        {
+                            //start next sections growth (from not started to idle)
+                            SetPlantSectionState(sectionID + 1, SECTION_STATE.IDLE);
+                        }
+                    }
+                    plantSections[sectionID].state = newState;
 
-        plantSections[sectionID].state = newState;
+                    break;
+                case SECTION_STATE.FAILED:
+                    plantSections[sectionID].renderer.enabled = false;
+                    //start next section
+                    if (plantSections[sectionID].state == SECTION_STATE.GROWING)
+                    {
+                        if ((sectionID - 1) >= 0)
+                        {
+                            //revert to previous sections growth (from not started to idle)
+                            SetPlantSectionState(sectionID - 1, SECTION_STATE.IDLE);
+                        }
+                    }
+                    plantSections[sectionID].state = newState;
+
+                    break;
+            }
+            Debug.Log(sectionID + newState);
+        }
+        
     }
 
     public void PlantSunEventActivity(bool isActive)
@@ -129,6 +139,8 @@ public class GrowingPlant : MonoBehaviour
         //if sun event started, go from idle to growing (goal of player is to un-lit plant while its growing)
         if (isLit)
         {
+            if (plantSections[0].state == SECTION_STATE.NOTSTARTED)
+                SetPlantSectionState(0, SECTION_STATE.IDLE);
             for (int i = 0; i < plantSections.Length; i++)
             {
                 //if this section event is active AKA growing
@@ -141,18 +153,19 @@ public class GrowingPlant : MonoBehaviour
         
     }
 
-    public void PlantInCloudShade(bool inShade)
-    {
-        Sun sunObj = GameObject.FindObjectOfType<Sun>();
-        if (!sunObj.gameObject.activeSelf)
-        {
-            //if sun is inactive
-            isLit = false;
-        }
-        else
-        {
-            //plant is not lit if its in the shade
-            isLit = !inShade;
-        }
-    }
+    //public void PlantInCloudShade(bool inShade)
+    //{
+    //    Sun sunObj = GameObject.FindObjectOfType<Sun>();
+    //    if (!sunObj.gameObject.activeSelf)
+    //    {
+    //        //if sun is inactive
+    //        isLit = false;
+    //    }
+    //    else
+    //    {
+    //        //plant is not lit if its in the shade
+    //        isLit = !inShade;
+    //    }
+    //    Debug.Log("cloud is lit?: " + isLit);
+    //}
 }
