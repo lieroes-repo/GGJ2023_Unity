@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B92E3F35-EE46-471B-A7CC-22694645B602}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{B92E3F35-EE46-471B-A7CC-22694645B602}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B92E3F35-EE46-471B-A7CC-22694645B602}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="bell" ID="{0E96E99E-6063-46DB-9B49-E1709F4271DD}" ShortID="774926964">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bell" ID="{E84091AA-779E-4E1C-B5D3-8D1F7A5D9019}">
+							<Language>SFX</Language>
+							<AudioFile>bell.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="864885969"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="bell" ID="{E84091AA-779E-4E1C-B5D3-8D1F7A5D9019}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="button_click" ID="{60B35AF7-A1F5-4303-B987-26BB69BC264F}" ShortID="457644568">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{627258CE-3190-4396-AFC0-8CB5D7E55830}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="202"/>
+											<Property Name="Min" Type="Real64" Value="-202"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>11</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="button_click" ID="{1F085975-4270-422E-9C79-65E954E6B2CD}">
+							<Language>SFX</Language>
+							<AudioFile>button_click.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="850301267"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="button_click" ID="{1F085975-4270-422E-9C79-65E954E6B2CD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="background" ID="{33B9472B-46E0-43E4-A050-F0AC4E18A520}" ShortID="704992520">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="villainy" ID="{D977ECFE-A68E-4AE8-98CB-16B8F228F001}">
+							<Language>SFX</Language>
+							<AudioFile>villainy.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="616732364"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="villainy" ID="{D977ECFE-A68E-4AE8-98CB-16B8F228F001}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="water_plants" ID="{2D423083-10AC-4389-9C9E-53FF90B2870F}" ShortID="355422991">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E39FF189-1EB9-40B4-BC5B-090058C5CB09}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="152"/>
+											<Property Name="Min" Type="Real64" Value="-177"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="water_plants_2" ID="{95C8FBCB-BEA0-43DD-B142-F66BE36FF31F}">
+							<Language>SFX</Language>
+							<AudioFile>water_plants_2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="544173828"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="water_plants_2" ID="{95C8FBCB-BEA0-43DD-B142-F66BE36FF31F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

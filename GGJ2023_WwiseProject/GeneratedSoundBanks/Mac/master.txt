@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	814543256	button_click			\Default Work Unit\button_click	
+	894555622	water_plants_stop			\Default Work Unit\water_plants_stop	
+	1240512178	bell			\Default Work Unit\bell	
+	2140747900	water_plants_play			\Default Work Unit\water_plants_play	
+	3650723969	background			\Default Work Unit\background	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	544173828	water_plants	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Mac\SFX\water_plants_2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\water_plants		463116
+	616732364	background	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Mac\SFX\villainy_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\background		11780520
+	850301267	button_click	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Mac\SFX\button_click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\button_click		552276
+	864885969	bell	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Mac\SFX\bell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bell		1472624
+

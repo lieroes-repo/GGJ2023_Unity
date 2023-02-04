@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F0E1FFA0-08AC-4572-91C9-34C881AF0C57}" SchemaVersion="103">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{F0E1FFA0-08AC-4572-91C9-34C881AF0C57}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F0E1FFA0-08AC-4572-91C9-34C881AF0C57}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="master" ID="{891CD6F8-9180-479A-9803-B0A133A03B50}">
+					<ObjectInclusionList>
+						<ObjectRef Name="background" ID="{462B465F-FE3E-4316-824C-77135EBEBC6E}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="water_plants_stop" ID="{BD70BF74-A8E2-455F-B723-071202987BFA}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="bell" ID="{497F1B2B-E131-45FC-A522-6A97F580629E}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="button_click" ID="{29643AE8-6CF3-46BE-9DFC-B575A4F9A8EB}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="water_plants_play" ID="{B7C2DECD-E9E8-4E36-8B0E-E24A685360FD}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

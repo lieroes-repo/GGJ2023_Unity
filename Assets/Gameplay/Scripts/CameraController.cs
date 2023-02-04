@@ -38,6 +38,16 @@ public class CameraController : MonoBehaviour
         {
             //mouseWorldPos now contains the hit location
             mouseWorldPos = hitData.point;
+
+            if (Input.GetMouseButton(0))
+            {
+                if (hitData.collider.tag == "Clickable")
+                {
+                    Debug.Log(mouseWorldPos);
+                    Vector3 newPos = new Vector3(mouseWorldPos.x, hitData.transform.position.y, hitData.transform.position.z);
+                    hitData.transform.localPosition = newPos;
+                }
+            }
         }
     }
 }

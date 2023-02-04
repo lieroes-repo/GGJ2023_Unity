@@ -16,5 +16,45 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
+		<SoundBank Id="4056684167" Language="SFX" Hash="1445564312">
+			<ObjectPath>\SoundBanks\Default Work Unit\master</ObjectPath>
+			<ShortName>master</ShortName>
+			<Path>master.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3650723969" Name="background" ObjectPath="\Events\Default Work Unit\background" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="616732364" Language="SFX">
+							<ShortName>villainy.wav</ShortName>
+							<Path>SFX\villainy_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1240512178" Name="bell" ObjectPath="\Events\Default Work Unit\bell" DurationType="OneShot" DurationMin="8.347846" DurationMax="8.347846">
+					<IncludedMemoryFiles>
+						<File Id="864885969" Language="SFX">
+							<ShortName>bell.wav</ShortName>
+							<Path>SFX\bell_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="814543256" Name="button_click" ObjectPath="\Events\Default Work Unit\button_click" DurationType="OneShot" DurationMin="2.785697" DurationMax="3.517877">
+					<IncludedMemoryFiles>
+						<File Id="850301267" Language="SFX">
+							<ShortName>button_click.wav</ShortName>
+							<Path>SFX\button_click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2140747900" Name="water_plants_play" ObjectPath="\Events\Default Work Unit\water_plants_play" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="544173828" Language="SFX">
+							<ShortName>water_plants_2.wav</ShortName>
+							<Path>SFX\water_plants_2_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="894555622" Name="water_plants_stop" ObjectPath="\Events\Default Work Unit\water_plants_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

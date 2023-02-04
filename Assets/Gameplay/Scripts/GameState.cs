@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameState : MonoBehaviour
 {
     private Sun sun;
 
     private Cloud[] clouds;
 
+    
     bool enableSun = true;
     // Start is called before the first frame update
     void Start()
