@@ -17,7 +17,7 @@ public class Sun : MonoBehaviour
         
     }
 
-    void SetSunEventActive(bool isActive)
+    public void SetSunEventActive(bool isActive)
     {
         GrowingPlant[] plants = FindObjectsOfType(typeof(GrowingPlant)) as GrowingPlant[];
         for (int plant = 0; plant < plants.Length; plant++)

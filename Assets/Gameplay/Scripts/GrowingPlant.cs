@@ -80,25 +80,45 @@ public class GrowingPlant : MonoBehaviour
 
     private void SetPlantSectionState(int sectionID, SECTION_STATE newState)
     {
-
-        //if section was prev in growing state, and is going to a complete state, activate the next plant section.
-        if(plantSections[sectionID].state == SECTION_STATE.GROWING)
+        switch (newState)
         {
-            if(newState == SECTION_STATE.GROWN || newState == SECTION_STATE.FAILED)
-            {
-                if((sectionID + 1) < plantSections.Length)
+            case SECTION_STATE.NOTSTARTED:
+
+                break;
+            case SECTION_STATE.IDLE:
+
+                break;
+            case SECTION_STATE.GROWING:
+
+                break;
+            case SECTION_STATE.GROWN:
+                //start next section
+                if (plantSections[sectionID].state == SECTION_STATE.GROWING)
                 {
-                    //start next sections growth (from not started to idle)
-                    SetPlantSectionState(sectionID + 1, SECTION_STATE.IDLE);
+                    if ((sectionID + 1) < plantSections.Length)
+                    {
+                        //start next sections growth (from not started to idle)
+                        SetPlantSectionState(sectionID + 1, SECTION_STATE.IDLE);
+                    }
                 }
-            }
+                plantSections[sectionID].renderer.enabled = true;
+                break;
+            case SECTION_STATE.FAILED:
+                //start next section
+                if (plantSections[sectionID].state == SECTION_STATE.GROWING)
+                {
+                    if ((sectionID + 1) < plantSections.Length)
+                    {
+                        //start next sections growth (from not started to idle)
+                        SetPlantSectionState(sectionID + 1, SECTION_STATE.IDLE);
+                    }
+                    plantSections[sectionID].renderer.enabled = true;
+                    plantSections[sectionID].renderer.material = null;
+                }
+                break;
         }
-        
-        //the actual SET STATE
+
         plantSections[sectionID].state = newState;
-
-
-        //TODO: add logic for going from state to state
     }
 
     public void PlantSunEventActivity(bool isActive)
