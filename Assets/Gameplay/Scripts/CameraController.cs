@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
     private float cameraRotY = 0f;
 
     private Vector3 mouseScreenPos;
-    private Vector3 mouseWorldPos;
+    public Vector3 mouseWorldPos { get; set; }
 
     // Start is called before the first frame update
     void Start()
