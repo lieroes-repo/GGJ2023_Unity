@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: 8993583692364589534}
   - {fileID: 1786985730544993841}
   - {fileID: 1665380804167464683}
-  secondsForPlantStageGrowth: 1.11
+  GrowthEventTimer: 15
 --- !u!1 &6048288305944891314
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 5561349426305759274, guid: d62afc289a1ff4a448aa4594f773d758, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

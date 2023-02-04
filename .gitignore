@@ -61,7 +61,7 @@ GGJ2023_WWiseProject/*_WwiseProject.*.wsettings
 GGJ2023_WWiseProject/**/*.akd
 Assets/LocalTesting/**
 Logs/*
-
+UserSettings/
 
 # build stuff (unsure?)
 # Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
@@ -96,3 +96,6 @@ WwiseUnityIntegration_*_Src.zip
 # Assets/Plugins/Editor/Jetbrains/
 # .idea
 Logs/shadercompiler-UnityShaderCompiler.exe0.log
+
+UserSettings/EditorUserSettings.asset
+UserSettings/Layouts/default-2022.dwlt
