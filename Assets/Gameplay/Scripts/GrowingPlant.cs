@@ -24,13 +24,13 @@ public class GrowingPlant : MonoBehaviour
     public AK.Wwise.Event sun_stop;
     struct PlantSection
     {
-        public MeshRenderer renderer;
+        public GameObject obj;
         public SECTION_STATE state;
         //Total Timer for the stage growth (each stage spends X time to progress/fail)
         public float timeForGrowthStage;
     }
 
-    public MeshRenderer[] sectionRenderers;
+    public GameObject[] sectionObjs;
 
     //The amount of time each plant stage has to grow before it fails
     [Range(1.0f, 20.0f)]
@@ -50,11 +50,11 @@ public class GrowingPlant : MonoBehaviour
     {
         isLit = false;
         //init the plant sections
-        plantSections = new PlantSection[sectionRenderers.Length];
-        for (int i = 0; i < sectionRenderers.Length; i++)
+        plantSections = new PlantSection[sectionObjs.Length];
+        for (int i = 0; i < sectionObjs.Length; i++)
         {
-            plantSections[i].renderer = sectionRenderers[i];
-            plantSections[i].renderer.enabled = false;
+            plantSections[i].obj = sectionObjs[i];
+            plantSections[i].obj.SetActive(false);
             plantSections[i].state = SECTION_STATE.NOTSTARTED;
             plantSections[i].timeForGrowthStage = GrowthEventTimer;
         }
@@ -97,20 +97,20 @@ public class GrowingPlant : MonoBehaviour
             switch (newState)
             {
                 case SECTION_STATE.NOTSTARTED:
-                    plantSections[sectionID].renderer.enabled = false;
+                    plantSections[sectionID].obj.SetActive(false);
                     plantSections[sectionID].state = newState;
                     break;
                 case SECTION_STATE.IDLE:
-                    plantSections[sectionID].renderer.enabled = false;
+                    plantSections[sectionID].obj.SetActive(false);
                     plantSections[sectionID].state = newState;
                     break;
                 case SECTION_STATE.GROWING:
-                    plantSections[sectionID].renderer.enabled = false;
+                    plantSections[sectionID].obj.SetActive(false);
                     plantSections[sectionID].state = newState;
                     plantSections[sectionID].timeForGrowthStage = GrowthEventTimer;
                     break;
                 case SECTION_STATE.GROWN:
-                    plantSections[sectionID].renderer.enabled = true;
+                    plantSections[sectionID].obj.SetActive(true);
                     plantSections[sectionID].timeForGrowthStage = GrowthEventTimer;
                     //start next section
                     if (plantSections[sectionID].state == SECTION_STATE.GROWING)
@@ -133,7 +133,7 @@ public class GrowingPlant : MonoBehaviour
 
                     break;
                 case SECTION_STATE.FAILED:
-                    plantSections[sectionID].renderer.enabled = false;
+                    plantSections[sectionID].obj.SetActive(false);
                     //start next section
                     if (plantSections[sectionID].state == SECTION_STATE.GROWING)
                     {

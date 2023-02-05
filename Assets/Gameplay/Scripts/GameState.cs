@@ -20,12 +20,17 @@ public class GameState : MonoBehaviour
 
         clouds = FindObjectsOfType<Cloud>();
 
-        InvokeRepeating("TriggerEvent", 8, 8);
+        //InvokeRepeating("TriggerEvent", 8, 8);
 
         for (int i = 0; i < allPlants.Length; i++) 
         {
             allPlants[i].enabled = false;
         }
+        //SpawnPlant();
+    }
+    public void BeginPlay()
+    {
+        InvokeRepeating("TriggerEvent", 8, 8);
         SpawnPlant();
     }
 
@@ -68,7 +73,7 @@ public class GameState : MonoBehaviour
             allPlants[i].PlantSunEventActivity(false);
         }
         CancelInvoke("DeActivateSun");
-        Invoke("DelayedSunDisapearence", 2.0f);
+        Invoke("DelayedSunDisapearence", 1.25f);
         
     }
 
@@ -77,6 +82,8 @@ public class GameState : MonoBehaviour
         Debug.LogWarning("Sun despawn time!");
         sun.gameObject.SetActive(false);
     }
+
+
 
     void TriggerEvent()
     {

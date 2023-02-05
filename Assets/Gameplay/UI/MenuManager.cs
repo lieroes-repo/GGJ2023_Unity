@@ -54,5 +54,11 @@ public class MenuManager : MonoBehaviour
     {
         
     }
+
+    public void StartGameplay()
+    {
+        Debug.Log("Menu manager gameplay start");
+        FindObjectOfType<GameState>().BeginPlay();
+    }
     
 }
