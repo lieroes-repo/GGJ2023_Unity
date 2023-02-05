@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(gameObject.transform.localEulerAngles.x, cameraRotY,
             gameObject.transform.localEulerAngles.z);
 
-        if (Input.GetKeyDown("F"))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (!fToggle)
             {
@@ -49,36 +49,44 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        while (fToggle = true)
-        {
-            // water plants
-            //Mouse movement
-            mouseScreenPos = Input.mousePosition;
-            Ray ray = Camera.main.ScreenPointToRay(mouseScreenPos);
-            if (Physics.Raycast(ray, out RaycastHit hitData))
-            {
-                //mouseWorldPos now contains the hit location
-                mouseWorldPos = hitData.point;
-                Vector3 newPos = new Vector3(mouseWorldPos.x, hitData.transform.position.y,
-                    hitData.transform.position.z);
-                newPos.x = Mathf.Clamp(newPos.x, -sunPosX, sunPosX - 1);
-                wateringCan.transform.position = newPos;
-
-                if (Input.GetMouseButton(0))
-                {
-                    mouseDown = true;
-                    if (hitData.collider.tag == "Clickable")
-                    {
-
-                        // Vector3 newPos = new Vector3(mouseWorldPos.x, hitData.transform.position.y,
-                        //     hitData.transform.position.z);
-                        // newPos.x = Mathf.Clamp(newPos.x, -sunPosX, sunPosX - 1);
-                        // hitData.transform.localPosition = newPos;
-
-                    }
-
-                }
-            }
-        }
+        // while (fToggle = true)
+        // {
+        //     // water plants
+        //     //Mouse movement
+        //     mouseScreenPos = Input.mousePosition;
+        //     Ray ray = Camera.main.ScreenPointToRay(mouseScreenPos);
+        //     if (Physics.Raycast(ray, out RaycastHit hitData))
+        //     {
+        //         //mouseWorldPos now contains the hit location
+        //         mouseWorldPos = hitData.point;
+        //         Vector3 newPos = new Vector3(mouseWorldPos.x, hitData.transform.position.y,
+        //             hitData.transform.position.z);
+        //         newPos.x = Mathf.Clamp(newPos.x, -sunPosX, sunPosX - 1);
+        //         wateringCan.transform.position = newPos;
+        //
+        //         if (Input.GetMouseButton(0))
+        //         {
+        //             mouseDown = true;
+        //             if (hitData.collider.tag == "Clickable")
+        //             {
+        //
+        //                 // water plant
+        //                 
+        //             }
+        //
+        //         }
+        //         if (Input.GetKeyDown(KeyCode.F))
+        //         {
+        //             if (!fToggle)
+        //             {
+        //                 fToggle = true;
+        //             }
+        //             else
+        //             {
+        //                 fToggle = false;
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
