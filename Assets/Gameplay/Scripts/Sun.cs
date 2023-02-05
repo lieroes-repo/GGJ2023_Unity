@@ -17,6 +17,8 @@ public class Sun : MonoBehaviour
         
     }
 
+    
+
     //public void SetSunEventActive(bool isActive)
     //{
     //    Debug.Log("Sun is " + isActive);
@@ -25,7 +27,7 @@ public class Sun : MonoBehaviour
     //        plants[plant].PlantSunEventActivity(isActive);
     //    }
     //    gameObject.SetActive(isActive);
-        
+
     //}
 
     //public void ObstructSun(bool isObstructed)

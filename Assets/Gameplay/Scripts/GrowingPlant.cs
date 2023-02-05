@@ -26,7 +26,7 @@ public class GrowingPlant : MonoBehaviour
 
     //The amount of time each plant stage has to grow before it fails
     [Range(1.0f, 20.0f)]
-    public float GrowthEventTimer = 5.0f;
+    private float GrowthEventTimer = 4.9f;
 
     private PlantSection[] plantSections;
     //if the plant has been watered recently
@@ -82,6 +82,8 @@ public class GrowingPlant : MonoBehaviour
         
         if(sectionID < plantSections.Length)
         {
+            Debug.Log(gameObject.name + " Section " + sectionID.ToString() + " will be " + newState.ToString());
+
             switch (newState)
             {
                 case SECTION_STATE.NOTSTARTED:
@@ -127,7 +129,6 @@ public class GrowingPlant : MonoBehaviour
 
                     break;
             }
-            Debug.Log(gameObject.name +" Section " +sectionID.ToString() + " is " + newState.ToString());
         }
         
     }
