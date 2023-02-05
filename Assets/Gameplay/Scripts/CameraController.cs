@@ -31,25 +31,7 @@ public class CameraController : MonoBehaviour
         cameraRotY = mouseX;
         cameraRotY = Mathf.Clamp(cameraRotY, -CameraRotateLimit, CameraRotateLimit);
 
-        transform.localRotation = Quaternion.Euler(gameObject.transform.localEulerAngles.x, cameraRotY, gameObject.transform.localEulerAngles.z);
-
-        //Mouse movement
-        mouseScreenPos = Input.mousePosition;
-        Ray ray = Camera.main.ScreenPointToRay(mouseScreenPos);
-        if (Physics.Raycast(ray, out RaycastHit hitData)) 
-        {
-            //mouseWorldPos now contains the hit location
-            mouseWorldPos = hitData.point;
-
-            if (Input.GetMouseButton(0))
-            {
-                if (hitData.collider.tag == "Clickable")
-                {
-                    Vector3 newPos = new Vector3(mouseWorldPos.x, hitData.transform.position.y, hitData.transform.position.z);
-                    newPos.x = Mathf.Clamp(newPos.x, -sunPosX, sunPosX-1);
-                    hitData.transform.localPosition = newPos;
-                }
-            }
-        }
+        transform.localRotation = Quaternion.Euler(gameObject.transform.localEulerAngles.x, cameraRotY,
+            gameObject.transform.localEulerAngles.z);
     }
 }
