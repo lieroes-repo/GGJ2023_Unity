@@ -87,8 +87,11 @@ public class GameManager : MonoBehaviour
                 
             break;
             case GAME_STATE.GAME:
-                SceneManager.LoadSceneAsync("MainScene", LoadSceneMode.Additive);
-                Debug.Log("loading Main Scene");
+                if (previousState == GAME_STATE.MAIN_MENU)
+                {
+                    SceneManager.LoadSceneAsync("MainScene", LoadSceneMode.Additive);
+                    Debug.Log("loading Main Scene");
+                }
 
                 break;
             case GAME_STATE.PAUSED:

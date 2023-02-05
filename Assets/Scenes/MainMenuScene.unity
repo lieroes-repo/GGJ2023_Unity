@@ -551,6 +551,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1583722491}
+    - target: {fileID: 2688961141456344332, guid: 9c3f5aa1d6d58ef4a8f0a69ce9481729, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1583722491}
+    - target: {fileID: 2688961141456344332, guid: 9c3f5aa1d6d58ef4a8f0a69ce9481729, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688961141456344332, guid: 9c3f5aa1d6d58ef4a8f0a69ce9481729, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688961141456344332, guid: 9c3f5aa1d6d58ef4a8f0a69ce9481729, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3046990120909778983, guid: 9c3f5aa1d6d58ef4a8f0a69ce9481729, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
