@@ -84,7 +84,6 @@ public class GrowingPlant : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void SetPlantSectionState(int sectionID, SECTION_STATE newState)
