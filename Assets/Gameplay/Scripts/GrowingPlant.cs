@@ -110,6 +110,12 @@ public class GrowingPlant : MonoBehaviour
                             //start next sections growth (from not started to idle)
                             SetPlantSectionState(sectionID + 1, SECTION_STATE.IDLE);
                         }
+                        else
+                        {
+                            //plant is complete!
+                            FindObjectOfType<GameState>().SpawnPlant();
+
+                        }
                     }
                     plantSections[sectionID].state = newState;
 
@@ -123,6 +129,11 @@ public class GrowingPlant : MonoBehaviour
                         {
                             //revert to previous sections growth (from not started to idle)
                             SetPlantSectionState(sectionID - 1, SECTION_STATE.IDLE);
+                        }
+                        else
+                        {
+                            SetPlantSectionState(sectionID, SECTION_STATE.IDLE);
+
                         }
                     }
                     plantSections[sectionID].state = newState;
@@ -141,7 +152,7 @@ public class GrowingPlant : MonoBehaviour
         //if sun event started, go from idle to growing (goal of player is to un-lit plant while its growing)
         if (isLit)
         {
-            if (plantSections[0].state == SECTION_STATE.NOTSTARTED)
+            if (plantSections[0].state == SECTION_STATE.NOTSTARTED || plantSections[0].state == SECTION_STATE.FAILED)
                 SetPlantSectionState(0, SECTION_STATE.IDLE);
             for (int i = 0; i < plantSections.Length; i++)
             {

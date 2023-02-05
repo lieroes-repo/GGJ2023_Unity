@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.033242565, g: 0.025648091, b: 0.033805456, a: 1}
+  m_IndirectSpecularColor: {r: 0.03320289, g: 0.025627274, b: 0.03379399, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1953,7 +1953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sectionRenderers:
   - {fileID: 1996119965}
-  GrowthEventTimer: 15
 --- !u!1 &327454870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,7 +2334,6 @@ MonoBehaviour:
   sectionRenderers:
   - {fileID: 1143772699}
   - {fileID: 776140492}
-  GrowthEventTimer: 15
 --- !u!1 &382020989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,7 +2925,6 @@ MonoBehaviour:
   - {fileID: 771596467}
   - {fileID: 1578188997}
   - {fileID: 1516235963}
-  GrowthEventTimer: 5
 --- !u!1001 &439477938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3463,7 +3460,6 @@ MonoBehaviour:
   - {fileID: 2355784576055254108}
   - {fileID: 8199526839024512660}
   - {fileID: 6705823529301263568}
-  GrowthEventTimer: 15
 --- !u!1 &665961583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3687,7 +3683,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728133449}
-  m_LocalRotation: {x: 0.98117584, y: 0.056892246, z: -0.042392198, w: 0.17961116}
+  m_LocalRotation: {x: 0.98117584, y: 0.056892235, z: -0.042392198, w: 0.17961116}
   m_LocalPosition: {x: 5.5786996, y: -0.74850017, z: 1.1507612}
   m_LocalScale: {x: 26.73397, y: 29.04011, z: 21.13616}
   m_ConstrainProportionsScale: 0
@@ -6994,7 +6990,6 @@ GameObject:
   - component: {fileID: 1258633336}
   - component: {fileID: 1258633337}
   - component: {fileID: 1258633338}
-  - component: {fileID: 1258633339}
   m_Layer: 0
   m_Name: Big Cloud
   m_TagString: Clickable
@@ -7111,114 +7106,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &1258633339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258633332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateType: 0
-  isSpeedBased: 0
-  hasOnStart: 0
-  hasOnPlay: 0
-  hasOnUpdate: 0
-  hasOnStepComplete: 0
-  hasOnComplete: 0
-  hasOnTweenCreated: 0
-  hasOnRewind: 0
-  onStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlay:
-    m_PersistentCalls:
-      m_Calls: []
-  onUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  onStepComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  onComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  onTweenCreated:
-    m_PersistentCalls:
-      m_Calls: []
-  onRewind:
-    m_PersistentCalls:
-      m_Calls: []
-  targetIsSelf: 1
-  targetGO: {fileID: 0}
-  tweenTargetIsTargetGO: 1
-  delay: 0
-  duration: 4
-  easeType: 7
-  easeCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  loopType: 1
-  loops: -1
-  id: 
-  isRelative: 1
-  isFrom: 0
-  isIndependentUpdate: 0
-  autoKill: 1
-  autoGenerate: 1
-  isActive: 1
-  isValid: 1
-  target: {fileID: 1258633333}
-  animationType: 2
-  targetType: 11
-  forcedTargetType: 0
-  autoPlay: 1
-  useTargetAsV3: 0
-  endValueFloat: 0
-  endValueV3: {x: 0, y: 0.2, z: 0}
-  endValueV2: {x: 0, y: 0}
-  endValueColor: {r: 1, g: 1, b: 1, a: 1}
-  endValueString: 
-  endValueRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  endValueTransform: {fileID: 0}
-  optionalBool0: 0
-  optionalBool1: 0
-  optionalFloat0: 0
-  optionalInt0: 0
-  optionalRotationMode: 0
-  optionalScrambleMode: 0
-  optionalShakeRandomnessMode: 0
-  optionalString: 
 --- !u!1 &1276413514
 GameObject:
   m_ObjectHideFlags: 0
@@ -9152,7 +9039,6 @@ MonoBehaviour:
   sectionRenderers:
   - {fileID: 805159583}
   - {fileID: 218457742}
-  GrowthEventTimer: 15
 --- !u!1 &1620067323
 GameObject:
   m_ObjectHideFlags: 0
@@ -9786,7 +9672,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696290559}
-  m_LocalRotation: {x: 0.8566817, y: 0.025309548, z: 0.44285947, w: 0.2633087}
+  m_LocalRotation: {x: 0.8566817, y: 0.025309548, z: 0.4428595, w: 0.2633087}
   m_LocalPosition: {x: 5.25, y: -0.71, z: 1.02}
   m_LocalScale: {x: 26.733978, y: 29.040121, z: 21.136164}
   m_ConstrainProportionsScale: 0
@@ -13634,7 +13520,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5320114788573096172}
-  m_LocalRotation: {x: -0, y: -0, z: 0.004113005, w: 0.99999154}
+  m_LocalRotation: {x: 0, y: 0, z: 0.004113005, w: 0.99999154}
   m_LocalPosition: {x: -3.37, y: 4.73, z: -0.25}
   m_LocalScale: {x: 80.55083, y: 80.55083, z: 80.55083}
   m_ConstrainProportionsScale: 1
@@ -13768,7 +13654,6 @@ MonoBehaviour:
   - {fileID: 8731628454913653870}
   - {fileID: 2062651612}
   - {fileID: 803269069362140556}
-  GrowthEventTimer: 15
 --- !u!1 &919132149411515094
 GameObject:
   m_ObjectHideFlags: 0
@@ -14028,7 +13913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4369895472237094018}
-  m_LocalRotation: {x: 0.96951455, y: 0.09199889, z: 0.15666775, w: 0.16441748}
+  m_LocalRotation: {x: 0.96951455, y: 0.09199887, z: 0.15666774, w: 0.16441754}
   m_LocalPosition: {x: 5.476082, y: -0.0345881, z: 0.25784454}
   m_LocalScale: {x: 26.73397, y: 29.04011, z: 21.13616}
   m_ConstrainProportionsScale: 0
@@ -14251,7 +14136,6 @@ MonoBehaviour:
   - {fileID: 3085915348673325401}
   - {fileID: 3420685919770990822}
   - {fileID: 827422035739301034}
-  GrowthEventTimer: 15
 --- !u!1 &2301478701267558936
 GameObject:
   m_ObjectHideFlags: 0
@@ -15377,7 +15261,6 @@ GameObject:
   - component: {fileID: 9044014387108483392}
   - component: {fileID: 9044014387108483393}
   - component: {fileID: 9044014387108483394}
-  - component: {fileID: 9044014387108483395}
   m_Layer: 0
   m_Name: Small Cloud
   m_TagString: Clickable
@@ -17105,7 +16988,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3931250379053899929}
-  m_Mesh: {fileID: 1383381221864021445, guid: c0a77d107ec4148bf95d40f7390ffc29, type: 3}
+  m_Mesh: {fileID: -6766908882241400143, guid: b35fab78893ed4cee8c3c678bd3ad6aa, type: 3}
 --- !u!4 &8847061417918383021
 Transform:
   m_ObjectHideFlags: 0
@@ -17204,114 +17087,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &9044014387108483395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5320114788573096172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateType: 0
-  isSpeedBased: 0
-  hasOnStart: 0
-  hasOnPlay: 0
-  hasOnUpdate: 0
-  hasOnStepComplete: 0
-  hasOnComplete: 0
-  hasOnTweenCreated: 0
-  hasOnRewind: 0
-  onStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlay:
-    m_PersistentCalls:
-      m_Calls: []
-  onUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  onStepComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  onComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  onTweenCreated:
-    m_PersistentCalls:
-      m_Calls: []
-  onRewind:
-    m_PersistentCalls:
-      m_Calls: []
-  targetIsSelf: 1
-  targetGO: {fileID: 0}
-  tweenTargetIsTargetGO: 1
-  delay: 0.3
-  duration: 2
-  easeType: 7
-  easeCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  loopType: 1
-  loops: -1
-  id: 
-  isRelative: 1
-  isFrom: 0
-  isIndependentUpdate: 0
-  autoKill: 1
-  autoGenerate: 1
-  isActive: 1
-  isValid: 1
-  target: {fileID: 591920315507371041}
-  animationType: 2
-  targetType: 11
-  forcedTargetType: 0
-  autoPlay: 1
-  useTargetAsV3: 0
-  endValueFloat: 0
-  endValueV3: {x: 0, y: -0.1, z: 0}
-  endValueV2: {x: 0, y: 0}
-  endValueColor: {r: 1, g: 1, b: 1, a: 1}
-  endValueString: 
-  endValueRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  endValueTransform: {fileID: 0}
-  optionalBool0: 0
-  optionalBool1: 0
-  optionalFloat0: 0
-  optionalInt0: 0
-  optionalRotationMode: 0
-  optionalScrambleMode: 0
-  optionalShakeRandomnessMode: 0
-  optionalString: 
 --- !u!4 &9205915859618522824
 Transform:
   m_ObjectHideFlags: 0

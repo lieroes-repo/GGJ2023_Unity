@@ -20,13 +20,13 @@ public class GameState : MonoBehaviour
 
         clouds = FindObjectsOfType<Cloud>();
 
-        InvokeRepeating("SpawnPlant", 5, 15);
         InvokeRepeating("TriggerEvent", 8, 8);
 
         for (int i = 0; i < allPlants.Length; i++) 
         {
             allPlants[i].enabled = false;
         }
+        SpawnPlant();
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class GameState : MonoBehaviour
 
     }
 
-    void SpawnPlant()
+    public void SpawnPlant()
     {
         
         if (spawnedPlantsID < allPlants.Length)
@@ -90,7 +90,8 @@ public class GameState : MonoBehaviour
                 ActivateSun();
                 break;
             case 1:
-                
+                //sun event
+                ActivateSun();
                 break;
 
             //case 2:
