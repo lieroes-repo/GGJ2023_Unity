@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03320289, g: 0.025627274, b: 0.03379399, a: 1}
+  m_IndirectSpecularColor: {r: 0.033196736, g: 0.025623824, b: 0.033792958, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1017,6 +1017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 123239751}
   - component: {fileID: 123239750}
+  - component: {fileID: 123239752}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1064,6 +1065,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &123239752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123239749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fad7339a1c4ac42a53721800541f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 008a6f9d75bee2e45931b733d941a255, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &123331542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,6 +1976,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 053a319ba821fdc47b7d8744fec7d374, type: 2}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 015448c4cdd554346a20d04a07e49d6a, type: 2}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d7981d936f5edc4eb28a9a69dab9e0e, type: 2}
   sectionRenderers:
   - {fileID: 1996119965}
 --- !u!1 &327454870
@@ -2331,6 +2368,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 053a319ba821fdc47b7d8744fec7d374, type: 2}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 015448c4cdd554346a20d04a07e49d6a, type: 2}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d7981d936f5edc4eb28a9a69dab9e0e, type: 2}
   sectionRenderers:
   - {fileID: 1143772699}
   - {fileID: 776140492}
@@ -2916,6 +2965,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 053a319ba821fdc47b7d8744fec7d374, type: 2}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 015448c4cdd554346a20d04a07e49d6a, type: 2}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d7981d936f5edc4eb28a9a69dab9e0e, type: 2}
   sectionRenderers:
   - {fileID: 1660668150}
   - {fileID: 546958219}
@@ -3455,6 +3516,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 053a319ba821fdc47b7d8744fec7d374, type: 2}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 015448c4cdd554346a20d04a07e49d6a, type: 2}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d7981d936f5edc4eb28a9a69dab9e0e, type: 2}
   sectionRenderers:
   - {fileID: 3108267755896867879}
   - {fileID: 2355784576055254108}
@@ -7077,6 +7150,7 @@ MonoBehaviour:
   spawnPos: {x: 0, y: 0, z: 0}
   smoothTime: 0.5
   speed: 10
+  mouseCloudSpeed: 50
 --- !u!65 &1258633337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9036,6 +9110,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 053a319ba821fdc47b7d8744fec7d374, type: 2}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 015448c4cdd554346a20d04a07e49d6a, type: 2}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d7981d936f5edc4eb28a9a69dab9e0e, type: 2}
   sectionRenderers:
   - {fileID: 805159583}
   - {fileID: 218457742}
@@ -13649,6 +13735,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 053a319ba821fdc47b7d8744fec7d374, type: 2}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 015448c4cdd554346a20d04a07e49d6a, type: 2}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d7981d936f5edc4eb28a9a69dab9e0e, type: 2}
   sectionRenderers:
   - {fileID: 3702480043021783887}
   - {fileID: 8731628454913653870}
@@ -14127,6 +14225,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 053a319ba821fdc47b7d8744fec7d374, type: 2}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 015448c4cdd554346a20d04a07e49d6a, type: 2}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d7981d936f5edc4eb28a9a69dab9e0e, type: 2}
   sectionRenderers:
   - {fileID: 1187700350278671469}
   - {fileID: 226899966033975537}
@@ -17058,6 +17168,7 @@ MonoBehaviour:
   spawnPos: {x: 0, y: 0, z: 0}
   smoothTime: 0.5
   speed: 10
+  mouseCloudSpeed: 50
 --- !u!65 &9044014387108483393
 BoxCollider:
   m_ObjectHideFlags: 0

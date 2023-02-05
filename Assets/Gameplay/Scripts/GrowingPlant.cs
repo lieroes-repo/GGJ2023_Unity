@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+using AK;
 public enum SECTION_STATE
 {
     NOTSTARTED,
@@ -10,10 +12,16 @@ public enum SECTION_STATE
     FAILED
 }
 
+
 public class GrowingPlant : MonoBehaviour
 {
     
+    public AK.Wwise.Event plant_add;
+    public AK.Wwise.Event plant_remove;
+    public AK.Wwise.Event plant_complete;
 
+    public AK.Wwise.Event sun_play;
+    public AK.Wwise.Event sun_stop;
     struct PlantSection
     {
         public MeshRenderer renderer;
@@ -66,11 +74,13 @@ public class GrowingPlant : MonoBehaviour
                 {
                     //event success!
                     SetPlantSectionState(i, SECTION_STATE.GROWN);
+                    plant_add.Post(gameObject);
                 }
                 else if (plantSections[i].timeForGrowthStage <= 0.0f)
                 {
                     //event fail
                     SetPlantSectionState(i, SECTION_STATE.FAILED);
+                    plant_remove.Post(gameObject);
                 }
             }
         }
@@ -114,6 +124,8 @@ public class GrowingPlant : MonoBehaviour
                         {
                             //plant is complete!
                             FindObjectOfType<GameState>().SpawnPlant();
+                            plant_complete.Post(gameObject);
+
 
                         }
                     }
@@ -152,6 +164,7 @@ public class GrowingPlant : MonoBehaviour
         //if sun event started, go from idle to growing (goal of player is to un-lit plant while its growing)
         if (isLit)
         {
+            sun_play.Post(gameObject);
             if (plantSections[0].state == SECTION_STATE.NOTSTARTED || plantSections[0].state == SECTION_STATE.FAILED)
                 SetPlantSectionState(0, SECTION_STATE.IDLE);
             for (int i = 0; i < plantSections.Length; i++)
@@ -163,6 +176,10 @@ public class GrowingPlant : MonoBehaviour
                 }
                 
             }
+        }
+        else
+        {
+            sun_stop.Post(gameObject);
         }
         
     }

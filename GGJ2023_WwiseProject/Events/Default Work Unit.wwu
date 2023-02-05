@@ -68,6 +68,10 @@
 				<Event Name="plant_add" ID="{CFEAF2C0-7D7E-4E21-9556-DF7F628CF8D7}">
 					<ChildrenList>
 						<Action Name="" ID="{90889163-C346-48A5-8BBD-01F55FD4787B}" ShortID="1015096867">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="good" ID="{D2AF3F26-BCCB-4E4D-9844-7235ED7A6D9D}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
@@ -101,6 +105,10 @@
 				<Event Name="sizzeling_start" ID="{85A4BB15-FCF6-4C47-B6E2-E3A80AFFEE9C}">
 					<ChildrenList>
 						<Action Name="" ID="{A714AFB1-813F-4AAF-908A-A5263401915B}" ShortID="348932841">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sizzeling" ID="{CF0B2C80-D5EC-4788-8E9F-4EFB1EDDF38E}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
@@ -114,6 +122,8 @@
 						<Action Name="" ID="{F19EB7DE-8588-4CF8-A2D7-AB61873BA5CD}" ShortID="931839670">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">

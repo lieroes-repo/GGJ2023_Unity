@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5da6a436da23df4eb9dac3ba0b7ea9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playBackgroundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d4e9afab77a9a2e48b85dea71980b066, type: 2}

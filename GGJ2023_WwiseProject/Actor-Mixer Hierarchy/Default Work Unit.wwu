@@ -163,6 +163,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="fully_grown" ID="{6564DD0C-C688-4F0A-89DF-919F375B7862}" ShortID="75905918">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
@@ -186,6 +193,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="good" ID="{D2AF3F26-BCCB-4E4D-9844-7235ED7A6D9D}" ShortID="627841060">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
@@ -211,6 +225,11 @@
 				<Sound Name="sizzeling" ID="{CF0B2C80-D5EC-4788-8E9F-4EFB1EDDF38E}" ShortID="441307042">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">

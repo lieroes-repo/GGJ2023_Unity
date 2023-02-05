@@ -61,11 +61,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 053a319ba821fdc47b7d8744fec7d374, type: 2}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 015448c4cdd554346a20d04a07e49d6a, type: 2}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d7981d936f5edc4eb28a9a69dab9e0e, type: 2}
+  sun_play:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ef895efee5eb0cf4d89a213b75aafd4d, type: 2}
+  sun_stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b71fd733047957f4899acc0597e90087, type: 2}
   sectionRenderers:
   - {fileID: 8993583692364589534}
   - {fileID: 1786985730544993841}
   - {fileID: 1665380804167464683}
-  GrowthEventTimer: 15
 --- !u!1 &6048288305944891314
 GameObject:
   m_ObjectHideFlags: 0
