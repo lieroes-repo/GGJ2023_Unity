@@ -99,6 +99,7 @@ public class GrowingPlant : MonoBehaviour
                     break;
                 case SECTION_STATE.GROWN:
                     plantSections[sectionID].renderer.enabled = true;
+                    plantSections[sectionID].timeForGrowthStage = GrowthEventTimer;
                     //start next section
                     if (plantSections[sectionID].state == SECTION_STATE.GROWING)
                     {
@@ -126,7 +127,7 @@ public class GrowingPlant : MonoBehaviour
 
                     break;
             }
-            Debug.Log(sectionID + newState);
+            Debug.Log(gameObject.name +" Section " +sectionID.ToString() + " is " + newState.ToString());
         }
         
     }
@@ -144,10 +145,11 @@ public class GrowingPlant : MonoBehaviour
             for (int i = 0; i < plantSections.Length; i++)
             {
                 //if this section event is active AKA growing
-                if (plantSections[i].state == SECTION_STATE.IDLE)
+                if (plantSections[i].state == SECTION_STATE.IDLE || plantSections[i].state == SECTION_STATE.GROWING)
                 {
                     SetPlantSectionState(i, SECTION_STATE.GROWING);
                 }
+                
             }
         }
         

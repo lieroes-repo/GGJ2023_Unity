@@ -20,7 +20,7 @@ public class Cloud : MonoBehaviour
     {
         if (other.tag =="Sun")
         {
-            FindObjectOfType<GameState>().ActivateSun(false);
+            FindObjectOfType<GameState>().DeActivateSun();
         }
     }
 

@@ -21,11 +21,11 @@ public class GameState : MonoBehaviour
         clouds = FindObjectsOfType<Cloud>();
 
         InvokeRepeating("SpawnPlant", 5, 15);
-        InvokeRepeating("TriggerEvent", 6, 5);
+        InvokeRepeating("TriggerEvent", 7, 5);
 
         for (int i = 0; i < allPlants.Length; i++) 
         {
-            allPlants[i].gameObject.SetActive(false);
+            allPlants[i].enabled = false;
         }
     }
 
@@ -41,39 +41,50 @@ public class GameState : MonoBehaviour
         if (spawnedPlantsID < allPlants.Length)
         {
             Debug.LogWarning("Spawned Plant #" + spawnedPlantsID);
-            allPlants[spawnedPlantsID].gameObject.SetActive(true);
+            allPlants[spawnedPlantsID].enabled = true;
             allPlants[spawnedPlantsID].SetPlantSectionState(0, SECTION_STATE.IDLE);
+            spawnedPlantsID++;
         }
-        spawnedPlantsID++;
+        
     }
 
-    public void ActivateSun(bool isActive)
+    public void ActivateSun()
     {
-        sun.gameObject.SetActive(isActive);
-        for (int i = 0; i < allPlants.Length; i++)  
+        sun.gameObject.SetActive(true);
+        for (int i = 0; i < spawnedPlantsID; i++)  
         {
-            allPlants[i].PlantSunEventActivity(isActive);
+            allPlants[i].PlantSunEventActivity(true);
         }
+        Invoke("DeActivateSun", 5.0f);
+    }
+    public void DeActivateSun()
+    {
+        sun.gameObject.SetActive(false);
+        for (int i = 0; i < spawnedPlantsID; i++)
+        {
+            allPlants[i].PlantSunEventActivity(false);
+        }
+        CancelInvoke("DeActivateSun");
     }
 
     void TriggerEvent()
     {
-        int eventToTrigger = Random.Range(0, 3);
+        int eventToTrigger = Random.Range(0, 2);//0 or 1
 
         Debug.LogWarning("Event #" + eventToTrigger);
         switch (eventToTrigger)
         {
             case 0:
-                break;
-                //no event
-            case 1:
                 //sun event
-                ActivateSun(true);
+                ActivateSun();
+                break;
+            case 1:
+                
                 break;
 
-            case 2:
-                //water event
-                break;
+            //case 2:
+            //    //water event
+            //    break;
         }
     }
 
