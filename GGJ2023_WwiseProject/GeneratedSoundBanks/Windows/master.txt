@@ -1,7 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
+	662382149	sizzeling_stop			\Default Work Unit\sizzeling_stop	
 	814543256	button_click			\Default Work Unit\button_click	
 	894555622	water_plants_stop			\Default Work Unit\water_plants_stop	
 	1240512178	bell			\Default Work Unit\bell	
+	1977732095	sizzeling_start			\Default Work Unit\sizzeling_start	
 	2140747900	water_plants_play			\Default Work Unit\water_plants_play	
 	2176714120	plant_add			\Default Work Unit\plant_add	
 	3650723969	background			\Default Work Unit\background	
@@ -13,6 +15,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	445225369	good	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\good_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\good		42778
 	544173828	water_plants	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\water_plants_2_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\water_plants		66506
 	544797994	fully_grown	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\fully_grown_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\fully_grown		49506
+	557474008	sizzeling	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\sizzeling_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\sizzeling		40301
 	616732364	background	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\villainy_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\background		878811
 	850301267	button_click	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\button_click_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\button_click		40355
 	864885969	bell	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\bell_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\bell		125609

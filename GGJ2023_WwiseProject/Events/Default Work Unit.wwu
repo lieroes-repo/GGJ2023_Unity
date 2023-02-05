@@ -65,6 +65,64 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="plant_add" ID="{CFEAF2C0-7D7E-4E21-9556-DF7F628CF8D7}">
+					<ChildrenList>
+						<Action Name="" ID="{90889163-C346-48A5-8BBD-01F55FD4787B}" ShortID="1015096867">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="good" ID="{D2AF3F26-BCCB-4E4D-9844-7235ED7A6D9D}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="plant_remove" ID="{F1BCE3A6-A935-44FD-8BC7-289067669D1E}">
+					<ChildrenList>
+						<Action Name="" ID="{16C3354D-B657-497A-B059-59119F4F8BCE}" ShortID="800380524">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bad" ID="{F0425E69-EC32-46BF-8980-6BA5ECBCEDED}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="plant_complete" ID="{1A7ECF2E-2DCF-4E59-BF40-8C814569C984}">
+					<ChildrenList>
+						<Action Name="" ID="{B38C930B-6B58-49B2-B691-32450378CE01}" ShortID="480564776">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fully_grown" ID="{6564DD0C-C688-4F0A-89DF-919F375B7862}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="sizzeling_start" ID="{85A4BB15-FCF6-4C47-B6E2-E3A80AFFEE9C}">
+					<ChildrenList>
+						<Action Name="" ID="{A714AFB1-813F-4AAF-908A-A5263401915B}" ShortID="348932841">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sizzeling" ID="{CF0B2C80-D5EC-4788-8E9F-4EFB1EDDF38E}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="sizzeling_stop" ID="{C8CD33CC-BB5F-438B-B9FF-EDBA4B1675F2}">
+					<ChildrenList>
+						<Action Name="" ID="{F19EB7DE-8588-4CF8-A2D7-AB61873BA5CD}" ShortID="931839670">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sizzeling" ID="{CF0B2C80-D5EC-4788-8E9F-4EFB1EDDF38E}" WorkUnitID="{B92E3F35-EE46-471B-A7CC-22694645B602}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
