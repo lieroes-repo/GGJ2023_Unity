@@ -30,7 +30,7 @@ public class GameState : MonoBehaviour
     }
     public void BeginPlay()
     {
-        InvokeRepeating("TriggerEvent", 8, 8);
+        InvokeRepeating("TriggerEvent", 3, 8);
         SpawnPlant();
     }
 
