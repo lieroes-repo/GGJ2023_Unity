@@ -8,8 +8,13 @@ public class MenuManager : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject GameHUD;
 
+    public static MenuManager Instance;
+  
+
     private void Awake()
     {
+        Instance = this;
+        DontDestroyOnLoad(this);
         GameManager.OnGameStateChange += GameManager_OnGameStateChange;
     }
 
@@ -23,6 +28,19 @@ public class MenuManager : MonoBehaviour
         MainMenu?.SetActive(nstate == GAME_STATE.MAIN_MENU);
         GameHUD?.SetActive(nstate == GAME_STATE.GAME);
         PauseMenu?.SetActive(nstate == GAME_STATE.PAUSED);
+    }
+
+    void TogglePause()
+    {
+       
+        if (FindObjectOfType<GameManager>().getGameManager().GetGameState() != GAME_STATE.PAUSED)
+            FindObjectOfType<GameManager>().getGameManager().setGameState((int)GAME_STATE.PAUSED);
+        else FindObjectOfType<GameManager>().getGameManager().RevertGameState();
+    }
+
+    public void Play()
+    {
+        FindObjectOfType<GameManager>().getGameManager().setGameState((int)GAME_STATE.GAME);
     }
 
     // Start is called before the first frame update

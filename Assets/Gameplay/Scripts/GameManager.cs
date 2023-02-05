@@ -4,8 +4,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering.Universal.Internal;
+using UnityEngine.SceneManagement;
+
 
 using AK;
+using Unity.VisualScripting;
 
 public enum GAME_STATE
 {
@@ -19,7 +22,9 @@ public class GameManager : MonoBehaviour
     GAME_STATE currentState = 0;
     GAME_STATE previousState = 0;
 
-    public static GameManager _instance;
+    private static GameManager _instance;
+
+    public MenuManager MenuManager;
 
     public static event Action<GAME_STATE> OnGameStateChange;
 
@@ -32,11 +37,36 @@ public class GameManager : MonoBehaviour
     
     // play background sound. Included this in this script cause this script is called at the start of the game
     playBackgroundEvent.Post(gameObject);
+
+    
+    }
+
+    public GameManager getGameManager()
+    {
+        return _instance;
     }
 
     private void Awake()
     {
         _instance = this;
+
+        DontDestroyOnLoad(this);
+
+        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+
+        MenuManager = MenuManager.Instance;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= SceneManager_sceneLoaded;
+    }
+
+    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        Debug.Log("loaded main Scene");
+        //SceneManager.MergeScenes(arg0,SceneManager.GetActiveScene());
+        SceneManager.SetActiveScene(arg0);
     }
 
     public void setGameState(int nState)
@@ -52,8 +82,10 @@ public class GameManager : MonoBehaviour
                 
             break;
             case GAME_STATE.GAME:
-                
-            break;
+                SceneManager.LoadSceneAsync("MainScene", LoadSceneMode.Additive);
+                Debug.Log("loading Main Scene");
+
+                break;
             case GAME_STATE.PAUSED:
               
             break;
@@ -65,9 +97,14 @@ public class GameManager : MonoBehaviour
         OnGameStateChange?.Invoke(currentState);
     }
 
-    GAME_STATE GetGameState()
+    public GAME_STATE GetGameState()
     {
         return _instance.currentState;
+    }
+
+    public void RevertGameState()
+    {
+        setGameState((int)previousState);
     }
 
     // Update is called once per frame
