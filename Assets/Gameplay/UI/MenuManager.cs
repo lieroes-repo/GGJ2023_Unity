@@ -18,6 +18,11 @@ public class MenuManager : MonoBehaviour
         GameManager.OnGameStateChange += GameManager_OnGameStateChange;
     }
 
+    public MenuManager getMenuManager()
+    {
+        return Instance;
+    }
+
     private void OnDestroy()
     {
         GameManager.OnGameStateChange -= GameManager_OnGameStateChange;
@@ -30,9 +35,8 @@ public class MenuManager : MonoBehaviour
         PauseMenu?.SetActive(nstate == GAME_STATE.PAUSED);
     }
 
-    void TogglePause()
+    public void TogglePause()
     {
-       
         if (FindObjectOfType<GameManager>().getGameManager().GetGameState() != GAME_STATE.PAUSED)
             FindObjectOfType<GameManager>().getGameManager().setGameState((int)GAME_STATE.PAUSED);
         else FindObjectOfType<GameManager>().getGameManager().RevertGameState();

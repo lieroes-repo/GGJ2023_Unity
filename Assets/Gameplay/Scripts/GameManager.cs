@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
 
     private static GameManager _instance;
 
-    public MenuManager MenuManager;
-
     public static event Action<GAME_STATE> OnGameStateChange;
 
     //wwise
@@ -53,8 +51,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
-
-        MenuManager = MenuManager.Instance;
     }
 
     private void OnDestroy()
