@@ -133,6 +133,35 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="mute" ID="{A252DC40-AB50-4480-B05D-D7B7510D9C2B}">
+					<ChildrenList>
+						<Action Name="" ID="{EF0A3F44-55E1-4D48-B3E1-E5664EB090DA}" ShortID="456944297">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="11"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="unmute" ID="{670D4F86-FB91-46F0-9A3A-0889462597F5}">
+					<ChildrenList>
+						<Action Name="" ID="{E1A4E26B-27BC-41EE-96E7-C710D2F5EBC2}" ShortID="592025030">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="11"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

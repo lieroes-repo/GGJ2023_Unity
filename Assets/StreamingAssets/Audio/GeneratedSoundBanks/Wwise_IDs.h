@@ -16,11 +16,13 @@ namespace AK
         static const AkUniqueID BACKGROUND = 3650723969U;
         static const AkUniqueID BELL = 1240512178U;
         static const AkUniqueID BUTTON_CLICK = 814543256U;
+        static const AkUniqueID MUTE = 2974103762U;
         static const AkUniqueID PLANT_ADD = 2176714120U;
         static const AkUniqueID PLANT_COMPLETE = 3914295754U;
         static const AkUniqueID PLANT_REMOVE = 4028853739U;
         static const AkUniqueID SIZZELING_START = 1977732095U;
         static const AkUniqueID SIZZELING_STOP = 662382149U;
+        static const AkUniqueID UNMUTE = 2156697475U;
         static const AkUniqueID WATER_PLANTS_PLAY = 2140747900U;
         static const AkUniqueID WATER_PLANTS_STOP = 894555622U;
     } // namespace EVENTS

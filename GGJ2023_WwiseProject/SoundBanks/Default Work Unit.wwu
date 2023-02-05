@@ -7,10 +7,12 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="background" ID="{462B465F-FE3E-4316-824C-77135EBEBC6E}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="sizzeling_stop" ID="{C8CD33CC-BB5F-438B-B9FF-EDBA4B1675F2}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="mute" ID="{A252DC40-AB50-4480-B05D-D7B7510D9C2B}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plant_remove" ID="{F1BCE3A6-A935-44FD-8BC7-289067669D1E}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="water_plants_stop" ID="{BD70BF74-A8E2-455F-B723-071202987BFA}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="bell" ID="{497F1B2B-E131-45FC-A522-6A97F580629E}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="button_click" ID="{29643AE8-6CF3-46BE-9DFC-B575A4F9A8EB}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="unmute" ID="{670D4F86-FB91-46F0-9A3A-0889462597F5}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="sizzeling_start" ID="{85A4BB15-FCF6-4C47-B6E2-E3A80AFFEE9C}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="plant_add" ID="{CFEAF2C0-7D7E-4E21-9556-DF7F628CF8D7}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="water_plants_play" ID="{B7C2DECD-E9E8-4E36-8B0E-E24A685360FD}" WorkUnitID="{5DE4D4E3-9D7D-4316-A863-F4889F579B0E}" Origin="Manual" Filter="7"/>

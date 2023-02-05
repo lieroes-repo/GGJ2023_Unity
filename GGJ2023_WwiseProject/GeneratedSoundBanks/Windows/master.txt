@@ -5,7 +5,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	1240512178	bell			\Default Work Unit\bell	
 	1977732095	sizzeling_start			\Default Work Unit\sizzeling_start	
 	2140747900	water_plants_play			\Default Work Unit\water_plants_play	
+	2156697475	unmute			\Default Work Unit\unmute	
 	2176714120	plant_add			\Default Work Unit\plant_add	
+	2974103762	mute			\Default Work Unit\mute	
 	3650723969	background			\Default Work Unit\background	
 	3914295754	plant_complete			\Default Work Unit\plant_complete	
 	4028853739	plant_remove			\Default Work Unit\plant_remove	
