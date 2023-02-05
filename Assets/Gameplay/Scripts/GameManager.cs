@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering.Universal.Internal;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 using AK;
@@ -29,6 +30,12 @@ public class GameManager : MonoBehaviour
     //wwise
     public AK.Wwise.Event playBackgroundEvent;
 
+    public AK.Wwise.Event muteEvent;
+    public AK.Wwise.Event unmuteEvent;
+
+    public Button muteButton;
+
+    private bool muteButtonPressed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +58,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+        Button btn = muteButton.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
     }
 
     private void OnDestroy()
@@ -106,6 +115,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    void TaskOnClick()
+    {
+        if (muteButtonPressed == false)
+        {
+            muteEvent.Post(gameObject);
+            muteButtonPressed = true;
+            Debug.Log("sound muted");
+        }
+        else
+        {
+            //unmute sound
+            unmuteEvent.Post(gameObject);
+            muteButtonPressed = false;
+            Debug.Log("sound Unmuted");
+        }
     }
 }
 

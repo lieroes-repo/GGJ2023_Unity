@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using AK;
 
 public class GameState : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class GameState : MonoBehaviour
 
     private int spawnedPlantsID = 0;
 
+    public AK.Wwise.Event bellEvent;
     public GrowingPlant[] allPlants;
 
     // Start is called before the first frame update
@@ -49,6 +50,10 @@ public class GameState : MonoBehaviour
             allPlants[spawnedPlantsID].enabled = true;
             allPlants[spawnedPlantsID].SetPlantSectionState(0, SECTION_STATE.IDLE);
             spawnedPlantsID++;
+        }
+        else
+        {
+            bellEvent.Post(gameObject);
         }
         
     }
