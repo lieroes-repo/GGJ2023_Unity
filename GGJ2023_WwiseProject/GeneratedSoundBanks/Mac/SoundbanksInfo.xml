@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4056684167" Language="SFX" Hash="1445564312">
+		<SoundBank Id="4056684167" Language="SFX" Hash="4215830672">
 			<ObjectPath>\SoundBanks\Default Work Unit\master</ObjectPath>
 			<ShortName>master</ShortName>
 			<Path>master.bnk</Path>
@@ -42,6 +42,30 @@
 						<File Id="850301267" Language="SFX">
 							<ShortName>button_click.wav</ShortName>
 							<Path>SFX\button_click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2176714120" Name="plant_add" ObjectPath="\Events\Default Work Unit\plant_add" DurationType="OneShot" DurationMin="3.428571" DurationMax="3.428571">
+					<IncludedMemoryFiles>
+						<File Id="445225369" Language="SFX">
+							<ShortName>good.wav</ShortName>
+							<Path>SFX\good_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3914295754" Name="plant_complete" ObjectPath="\Events\Default Work Unit\plant_complete" DurationType="OneShot" DurationMin="3.230771" DurationMax="3.230771">
+					<IncludedMemoryFiles>
+						<File Id="544797994" Language="SFX">
+							<ShortName>fully_grown.wav</ShortName>
+							<Path>SFX\fully_grown_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4028853739" Name="plant_remove" ObjectPath="\Events\Default Work Unit\plant_remove" DurationType="OneShot" DurationMin="1.333333" DurationMax="1.333333">
+					<IncludedMemoryFiles>
+						<File Id="279998666" Language="SFX">
+							<ShortName>bad.wav</ShortName>
+							<Path>SFX\bad_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -139,6 +139,75 @@
 						<ActiveSource Name="water_plants_2" ID="{95C8FBCB-BEA0-43DD-B142-F66BE36FF31F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="bad" ID="{F0425E69-EC32-46BF-8980-6BA5ECBCEDED}" ShortID="359181756">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bad" ID="{3EBE6394-B2FF-40E0-818F-AA177522DB3D}">
+							<Language>SFX</Language>
+							<AudioFile>bad.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="279998666"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="bad" ID="{3EBE6394-B2FF-40E0-818F-AA177522DB3D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fully_grown" ID="{6564DD0C-C688-4F0A-89DF-919F375B7862}" ShortID="75905918">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fully_grown" ID="{B002E752-9B66-4484-96AE-C96930B03A54}">
+							<Language>SFX</Language>
+							<AudioFile>fully_grown.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="544797994"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="fully_grown" ID="{B002E752-9B66-4484-96AE-C96930B03A54}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="good" ID="{D2AF3F26-BCCB-4E4D-9844-7235ED7A6D9D}" ShortID="627841060">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E065CF52-76DD-4D25-BBB8-3282C4172010}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1CE778F-0B3A-4FCD-A649-1EF99DEDB63E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="good" ID="{80EE1C11-1E53-43FB-B3E6-79BE7AA2A597}">
+							<Language>SFX</Language>
+							<AudioFile>good.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="445225369"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="good" ID="{80EE1C11-1E53-43FB-B3E6-79BE7AA2A597}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -3,10 +3,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	894555622	water_plants_stop			\Default Work Unit\water_plants_stop	
 	1240512178	bell			\Default Work Unit\bell	
 	2140747900	water_plants_play			\Default Work Unit\water_plants_play	
+	2176714120	plant_add			\Default Work Unit\plant_add	
 	3650723969	background			\Default Work Unit\background	
+	3914295754	plant_complete			\Default Work Unit\plant_complete	
+	4028853739	plant_remove			\Default Work Unit\plant_remove	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	279998666	bad	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\bad_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\bad		17904
+	445225369	good	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\good_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\good		42778
 	544173828	water_plants	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\water_plants_2_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\water_plants		66506
+	544797994	fully_grown	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\fully_grown_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\fully_grown		49506
 	616732364	background	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\villainy_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\background		878811
 	850301267	button_click	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\button_click_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\button_click		40355
 	864885969	bell	D:\Unity\GGJ2023\GGJ2023_WwiseProject\.cache\Windows\SFX\bell_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\bell		125609
