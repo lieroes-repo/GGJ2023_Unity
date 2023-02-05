@@ -684,6 +684,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4292336874
       objectReference: {fileID: 0}
+    - target: {fileID: 6228069473742556855, guid: 9c3f5aa1d6d58ef4a8f0a69ce9481729, type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7048134474117879091, guid: 9c3f5aa1d6d58ef4a8f0a69ce9481729, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 64
