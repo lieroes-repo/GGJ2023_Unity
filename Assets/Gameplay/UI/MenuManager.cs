@@ -64,5 +64,11 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Menu manager gameplay start");
         FindObjectOfType<GameState>().BeginPlay();
     }
+
+    public void QuitGame ()
+    {
+        Debug.Log("QUIT!)");
+        Application.Quit();
+    }
     
 }
