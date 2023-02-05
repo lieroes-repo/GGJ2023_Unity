@@ -15,8 +15,13 @@ public class Cloud : MonoBehaviour
 
     public float smoothTime = 0.5f; 
     public float speed = 10;
-
+    public float mouseCloudSpeed = 50;
+    private Vector3 mouseCloudVelocity;
     Vector3 velocity;
+
+    private bool mouseDown = false;
+
+    private bool cloudClicked = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,17 +42,22 @@ public class Cloud : MonoBehaviour
 
             if (Input.GetMouseButton(0))
             {
+                mouseDown = true;
                 if (hitData.collider.tag == "Clickable")
                 {
-                    Vector3 newPos = new Vector3(mouseWorldPos.x, hitData.transform.position.y, hitData.transform.position.z);
-                    newPos.x = Mathf.Clamp(newPos.x, -sunPosX, sunPosX-1);
-                    hitData.transform.localPosition = newPos;
+                      
+                        Vector3 newPos = new Vector3(mouseWorldPos.x, hitData.transform.position.y,
+                            hitData.transform.position.z);
+                        newPos.x = Mathf.Clamp(newPos.x, -sunPosX, sunPosX - 1);
+                        hitData.transform.localPosition = newPos;
+                        
                 }
+               
             }
             else
             {
-                // // // Make cloud move back to original position
-                //  gameObject.transform.position = Vector3.SmoothDamp(gameObject.transform.position, spawnPos, ref velocity, smoothTime, speed);
+                mouseDown = false;
+                
             }
         }
     }
