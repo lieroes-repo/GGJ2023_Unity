@@ -156,7 +156,7 @@ Transform:
   - {fileID: 805305054}
   - {fileID: 1595854256}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &32957963
 GameObject:
@@ -870,7 +870,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123331542
 GameObject:
@@ -1759,9 +1759,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_play:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   sectionRenderers:
   - {fileID: 1996119965}
-  GrowthEventTimer: 15
 --- !u!1 &327454870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,10 +2159,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_play:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   sectionRenderers:
   - {fileID: 1143772699}
   - {fileID: 776140492}
-  GrowthEventTimer: 15
 --- !u!1 &382020989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2764,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_play:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   sectionRenderers:
   - {fileID: 1660668150}
   - {fileID: 546958219}
@@ -2735,7 +2793,6 @@ MonoBehaviour:
   - {fileID: 771596467}
   - {fileID: 1578188997}
   - {fileID: 1516235963}
-  GrowthEventTimer: 5
 --- !u!1001 &439477938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2936,7 +2993,7 @@ Transform:
   - {fileID: 543450653349957740}
   - {fileID: 313237440}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &522317229
 GameObject:
@@ -3265,12 +3322,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_play:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   sectionRenderers:
   - {fileID: 3108267755896867879}
   - {fileID: 2355784576055254108}
   - {fileID: 8199526839024512660}
   - {fileID: 6705823529301263568}
-  GrowthEventTimer: 15
 --- !u!1 &665961583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5516,7 +5592,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089671870
 GameObject:
@@ -6629,7 +6705,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.18}
 --- !u!23 &1258633334
 MeshRenderer:
@@ -6696,6 +6772,7 @@ MonoBehaviour:
   spawnPos: {x: 0, y: 0, z: 0}
   smoothTime: 0.5
   speed: 10
+  mouseCloudSpeed: 50
 --- !u!65 &1258633337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8270,10 +8347,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_play:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   sectionRenderers:
   - {fileID: 805159583}
   - {fileID: 218457742}
-  GrowthEventTimer: 15
 --- !u!1 &1620067323
 GameObject:
   m_ObjectHideFlags: 0
@@ -10146,7 +10242,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1981479594
 MonoBehaviour:
@@ -11336,7 +11432,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &226899966033975537
 MeshRenderer:
@@ -11627,7 +11723,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.471}
 --- !u!23 &803269069362140556
 MeshRenderer:
@@ -11750,12 +11846,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_play:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   sectionRenderers:
   - {fileID: 3702480043021783887}
   - {fileID: 8731628454913653870}
   - {fileID: 2062651612}
   - {fileID: 803269069362140556}
-  GrowthEventTimer: 15
 --- !u!1 &919132147978574379
 GameObject:
   m_ObjectHideFlags: 0
@@ -11783,6 +11898,7 @@ GameObject:
   - component: {fileID: 543450653349957740}
   - component: {fileID: 3469287837335019465}
   - component: {fileID: 1711813855421606659}
+  - component: {fileID: 3469287837335019466}
   m_Layer: 0
   m_Name: SM_Floor-01
   m_TagString: Untagged
@@ -12290,6 +12406,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aa9cd997b95447a1e0d95ecd6485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plant_add:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_remove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  plant_complete:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_play:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  sun_stop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   sectionRenderers:
   - {fileID: 1187700350278671469}
   - {fileID: 226899966033975537}
@@ -12299,7 +12435,6 @@ MonoBehaviour:
   - {fileID: 3085915348673325401}
   - {fileID: 3420685919770990822}
   - {fileID: 827422035739301034}
-  GrowthEventTimer: 15
 --- !u!1 &2301478701267558936
 GameObject:
   m_ObjectHideFlags: 0
@@ -12764,6 +12899,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149411515094}
   m_Mesh: {fileID: 2686677070092621420, guid: ed06af53a6ed146e28701190d692b143, type: 3}
+--- !u!65 &3469287837335019466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149411515094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010000003, y: 0.01, z: 0.010000003}
+  m_Center: {x: 0, y: -0.0000000018626451, z: 2.6998653e-11}
 --- !u!1 &3476937146617829945
 GameObject:
   m_ObjectHideFlags: 0
@@ -14041,6 +14189,65 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
+--- !u!1001 &6991516523241199948
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391505551200794739, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070692068606398699, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
+      propertyPath: m_Name
+      value: Mist
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7179b03523c6f4e46a70c6892a20b5a4, type: 3}
 --- !u!33 &7035011866485446673
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14754,6 +14961,7 @@ MonoBehaviour:
   spawnPos: {x: 0, y: 0, z: 0}
   smoothTime: 0.5
   speed: 10
+  mouseCloudSpeed: 50
 --- !u!65 &9044014387108483393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14796,7 +15004,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 28.207, y: -127.27, z: -120.03}
 --- !u!114 &9205915859618522825
 MonoBehaviour:
