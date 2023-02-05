@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2552935714073004053}
   - component: {fileID: -3704256160776205031}
+  - component: {fileID: 4079662607955741045}
   m_Layer: 0
   m_Name: GameManagerObject
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-3704256160776205031
 MonoBehaviour:
@@ -44,7 +45,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5da6a436da23df4eb9dac3ba0b7ea9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuManager: {fileID: 0}
   playBackgroundEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d4e9afab77a9a2e48b85dea71980b066, type: 2}
+--- !u!114 &4079662607955741045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800247435505178590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fad7339a1c4ac42a53721800541f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 008a6f9d75bee2e45931b733d941a255, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
